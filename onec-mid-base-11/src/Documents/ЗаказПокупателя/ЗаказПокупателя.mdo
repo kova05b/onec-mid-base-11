@@ -68,7 +68,7 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
-  <defaultObjectForm>Document.ЗаказПокупателя.Form.ФормаДокумента</defaultObjectForm>
+  <defaultObjectForm>Document.ЗаказПокупателя.Form.ФормаДокумента1</defaultObjectForm>
   <defaultListForm>Document.ЗаказПокупателя.Form.ФормаСписка</defaultListForm>
   <registerRecords>AccumulationRegister.ОбработкаЗаказов</registerRecords>
   <registerRecords>AccumulationRegister.ЗадолженностьПокупателей</registerRecords>
@@ -193,6 +193,47 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="30ae19c2-a8c2-4280-8d6f-3a2e8e7b6a30">
+    <name>HW11_КонтактноеЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контактное лицо</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.HW11_КонтактныеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Document.ЗаказПокупателя.Attribute.Контрагент</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="86907f17-5e93-49fb-8226-51735e2da04a">
+    <name>HW11_СогласованнаяСкидка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласованная скидка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:StringValue">
+      <value>100</value>
+    </maxValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="d2984117-1a5a-45ca-bc97-adb070bd946d">
     <name>ФормаДокумента</name>
     <synonym>
@@ -210,6 +251,9 @@
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2952ea40-3b2c-4e6b-80c4-57b0497e518f">
+    <name>ФормаДокумента1</name>
   </forms>
   <tabularSections uuid="e45e2b26-9d6f-4cbd-a044-788972210d49">
     <producedTypes>
